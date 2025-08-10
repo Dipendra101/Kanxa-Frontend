@@ -1,15 +1,21 @@
 // client/src/pages/HomePage.js
-
 import React from 'react';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
+import OurOfferings from '../components/OurOfferings';
+import WhyChooseUs from '../components/WhyChooseUs';
+import About from '../components/About';
+import Testimonials from '../components/Testimonials';
+import CTA from '../components/CTA';
 
 const HomePage = () => {
     return (
         <div>
             <Hero />
-            <Services />
-            {/* You can add more sections like testimonials, etc. here later */}
+            <WhyChooseUs />
+            <OurOfferings />
+            <About />
+            <Testimonials />
+            <CTA />
         </div>
     );
 };

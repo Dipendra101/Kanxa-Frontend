@@ -121,3 +121,173 @@
 .social-icon:hover {
     transform: scale(1.2);
 }
+
+/* client/src/styles/LandingPage.css */
+
+/* --- User Dropdown Menu --- */
+.user-menu-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 65px; /* Position below the navbar */
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    z-index: 1001;
+    width: 200px;
+    border: 1px solid #ddd;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+/* client/src/styles/LandingPage.css */
+
+/* --- My Account Pages UI --- */
+.account-page-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.account-page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to one column for mobile */
+    gap: 1.5rem;
+}
+
+/* On larger screens, use two columns */
+@media (min-width: 992px) {
+    .account-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.account-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.account-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1f3f5;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.account-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.account-card-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.account-card-body p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.account-card-body strong {
+    color: #333;
+}
+
+.account-card-footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding-top: 1rem;
+    text-align: right;
+}
+
+.status-pill {
+    padding: 0.3rem 0.8rem;
+    color: white;
+    border-radius: 999px; /* Pill shape */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px dashed #ddd;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    color: #007bff;
+    opacity: 0.5;
+}
+
+.empty-state-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.empty-state-link:hover {
+    background-color: #0056b3;
+}

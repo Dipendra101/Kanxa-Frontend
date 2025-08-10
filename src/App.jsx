@@ -9,23 +9,26 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard'; // <-- IMPORT
 
-// Transportation Pages
+// User Dashboard Pages
+import MyBookingsPage from './pages/MyBookingsPage';
+import MyOrdersPage from './pages/MyOrdersPage';
+import MyRequestsPage from './pages/MyRequestsPage';
+
+// Main Feature Pages
 import TransportationPage from './pages/TransportationPage';
 import BookingPage from './pages/BookingPage';
-import MyBookingsPage from './pages/MyBookingsPage';
-
-// Construction Pages
 import ConstructionPage from './pages/ConstructionPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
-import MyOrdersPage from './pages/MyOrdersPage';
-
-// Garage Pages
 import GaragePage from './pages/GaragePage';
-import GarageStorePage from './pages/GarageStorePage'; // <-- NEW
-import MyRequestsPage from './pages/MyRequestsPage';
+import GarageStorePage from './pages/GarageStorePage';
 
+// Admin Components & Pages
+import AdminProtectedRoute from './components/AdminProtectedRoute';
+import AdminLayout from './components/AdminLayout';
+import DashboardPage from './pages/admin/DashboardPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
 
@@ -36,12 +39,15 @@ function App() {
         <Navbar />
         <main style={{ flex: '1 0 auto' }}>
           <Routes>
-            {/* --- CORE ROUTES --- */}
+            {/* --- CORE & PUBLIC ROUTES --- */}
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
 
-            {/* --- USER DASHBOARD ROUTES --- */}
+            {/* --- GENERAL DASHBOARD REDIRECT --- */}
+            <Route path="/dashboard" element={<Dashboard />} />
+
+            {/* --- USER-SPECIFIC ROUTES --- */}
             <Route path="/my-bookings" element={<MyBookingsPage />} />
             <Route path="/my-orders" element={<MyOrdersPage />} />
             <Route path="/my-requests" element={<MyRequestsPage />} />
@@ -49,19 +55,29 @@ function App() {
             {/* --- MAIN FEATURE ROUTES --- */}
             <Route path="/transportation" element={<TransportationPage />} />
             <Route path="/book-seat/:vehicleId" element={<BookingPage />} />
-            
             <Route path="/construction" element={<ConstructionPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
-            
             <Route path="/garage" element={<GaragePage />} />
-            <Route path="/garage/store" element={<GarageStorePage />} /> {/* <-- NEW */}
+            <Route path="/garage/store" element={<GarageStorePage />} />
 
-            {/* --- PLACEHOLDER ROUTES --- */}
+            {/* --- ADMIN ROUTES --- */}
+            <Route element={<AdminProtectedRoute />}>
+                <Route path="/admin" element={<AdminLayout />}>
+                    <Route path="dashboard" element={<DashboardPage />} />
+                    <Route path="bookings" element={<Placeholder title="Admin Bookings Management" />} />
+                    <Route path="vehicles" element={<Placeholder title="Admin Vehicles Management" />} />
+                    <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
+                    <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
+                    <Route path="products" element={<Placeholder title="Admin Products Management" />} />
+                    <Route path="requests" element={<Placeholder title="Admin Service Requests" />} />
+                </Route>
+            </Route>
+
+            {/* --- MISC & FALLBACK ROUTES --- */}
             <Route path="/contact" element={<Placeholder title="Contact Us" />} />
             <Route path="/faq" element={<Placeholder title="Frequently Asked Questions" />} />
             <Route path="/privacy-policy" element={<Placeholder title="Privacy Policy" />} />
-            
             <Route path="*" element={<Placeholder title="404: Page Not Found" />} />
           </Routes>
         </main>

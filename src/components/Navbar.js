@@ -1,46 +1,38 @@
 // client/src/components/Navbar.js
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import '../styles/LandingPage.css';
 
 const Navbar = () => {
     const navigate = useNavigate();
-    // Check for the auth token in local storage
     const token = localStorage.getItem('token');
 
     const handleLogout = () => {
-        // Remove the token from storage
         localStorage.removeItem('token');
-        // Navigate to the homepage
-        navigate('/');
-        // Force a reload to ensure all state is cleared
+        navigate('/login');
         window.location.reload();
     };
 
     return (
         <header style={styles.header}>
             <div style={styles.container}>
-                <Link to="/" style={styles.logo}>
-                    Kanxa Safari 🐘
-                </Link>
+                <Link to="/" style={styles.logo}>Kanxa Safari 🐘</Link>
                 <nav>
                     <ul style={styles.navList}>
-                        <li><Link to="/transportation" style={styles.navLink}>Transportation</Link></li>
-                        <li><Link to="/construction" style={styles.navLink}>Construction</Link></li>
-                        <li><Link to="/garage" style={styles.navLink}>Garage</Link></li>
+                        <li><Link to="/transportation" className="lp-nav-link" style={styles.navLink}>Transportation</Link></li>
+                        <li><Link to="/construction" className="lp-nav-link" style={styles.navLink}>Construction</Link></li>
+                        <li><Link to="/garage" className="lp-nav-link" style={styles.navLink}>Garage</Link></li>
                     </ul>
                 </nav>
                 <div>
                     {token ? (
-                        // If user is logged in, show a Logout button
-                        <button onClick={handleLogout} style={{...styles.button, ...styles.buttonPrimary}}>
+                        <button onClick={handleLogout} className="lp-button lp-button-primary" style={{...styles.button, ...styles.buttonPrimary}}>
                             Logout
                         </button>
                     ) : (
-                        // If user is not logged in, show Login and Sign Up buttons
                         <>
-                            <Link to="/login" style={styles.button}>Login</Link>
-                            <Link to="/signup" style={{...styles.button, ...styles.buttonPrimary}}>Sign Up</Link>
+                            <Link to="/login" className="lp-button" style={styles.button}>Login</Link>
+                            <Link to="/signup" className="lp-button lp-button-primary" style={{...styles.button, ...styles.buttonPrimary}}>Sign Up</Link>
                         </>
                     )}
                 </div>
@@ -49,7 +41,6 @@ const Navbar = () => {
     );
 };
 
-// Styles (same as before)
 const styles = {
   header: {
     backgroundColor: '#fff',
@@ -85,7 +76,6 @@ const styles = {
     color: '#555',
     fontWeight: '500',
     fontSize: '1rem',
-    transition: 'color 0.3s',
   },
   button: {
     textDecoration: 'none',
@@ -93,10 +83,8 @@ const styles = {
     borderRadius: '8px',
     marginLeft: '1rem',
     fontWeight: '500',
-    transition: 'background-color 0.3s, color 0.3s',
     border: '1px solid #ddd',
     color: '#333',
-    cursor: 'pointer',
     background: 'none',
     fontSize: '1rem',
     fontFamily: 'inherit',

@@ -1,7 +1,7 @@
 // client/src/components/Hero.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/LandingPage.css';
 
 const Hero = () => {
     return (
@@ -10,7 +10,7 @@ const Hero = () => {
             <div style={styles.content}>
                 <h1 style={styles.title}>Your Journey, Your Projects, Your Partner</h1>
                 <p style={styles.subtitle}>Kanxa Safari offers reliable transportation, quality construction materials, and expert garage services, all under one roof.</p>
-                <Link to="/transportation" style={styles.ctaButton}>Explore Our Services</Link>
+                <Link to="/transportation" className="hero-cta-button" style={styles.ctaButton}>Explore Our Services</Link>
             </div>
         </section>
     );
@@ -25,7 +25,6 @@ const styles = {
         justifyContent: 'center',
         textAlign: 'center',
         color: 'white',
-        // Replace with a high-quality image URL relevant to your business
         backgroundImage: `url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -64,7 +63,6 @@ const styles = {
         backgroundColor: '#007bff',
         borderRadius: '8px',
         textDecoration: 'none',
-        transition: 'background-color 0.3s ease',
     }
 };
 

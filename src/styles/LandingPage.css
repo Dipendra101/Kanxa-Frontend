@@ -1,0 +1,123 @@
+/* client/src/styles/LandingPage.css */
+
+/* --- Image Carousel Animations --- */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Slow, smooth fade */
+    border-radius: 12px;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* --- Testimonial Slider Animations --- */
+.testimonial-slide {
+    display: none; /* Hide all slides by default */
+    text-align: center;
+    padding: 1rem;
+}
+
+.testimonial-slide.active {
+    display: block; /* Show only the active slide */
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- General Button & Link Hover Effects --- */
+.lp-button, .lp-cta-button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.lp-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.lp-button-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+}
+.lp-nav-link {
+    transition: color 0.3s ease;
+}
+.lp-nav-link:hover {
+    color: #007bff;
+}
+
+/* --- Hero Section --- */
+.hero-cta-button {
+    transition: all 0.3s ease;
+}
+.hero-cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Why Choose Us Section --- */
+.why-choose-us-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #e7e7e7;
+}
+.why-choose-us-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+/* --- Our Offerings Section --- */
+.offerings-tab {
+    transition: all 0.3s ease;
+}
+.offerings-tab:hover:not(.active) {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+.offerings-cta-button {
+     transition: all 0.3s ease;
+}
+.offerings-cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --- Testimonials Section (No card hover needed for slider) --- */
+
+/* --- CTA Section --- */
+.cta-button-final {
+    transition: all 0.3s ease;
+}
+.cta-button-final:hover {
+    background-color: #f0f2f5;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.footer-link {
+    transition: color 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-link:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}

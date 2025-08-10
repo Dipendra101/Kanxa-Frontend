@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
+import Signup from './pages/Signup'; // <-- Import Signup
+import Login from './pages/Login';   // <-- Import Login
 
 // A simple placeholder for other pages
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
@@ -20,9 +22,10 @@ function App() {
             <Route path="/transportation" element={<Placeholder title="Transportation" />} />
             <Route path="/construction" element={<Placeholder title="Construction" />} />
             <Route path="/garage" element={<Placeholder title="Garage" />} />
-            <Route path="/login" element={<Placeholder title="Login" />} />
-            <Route path="/signup" element={<Placeholder title="Signup" />} />
-            {/* We will replace these placeholders with real pages later */}
+            
+            {/* Use the actual Login and Signup components */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </main>
         <Footer />

@@ -1,11 +1,17 @@
 // client/src/components/Navbar.js
+
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/LandingPage.css';
+import '../styles/LandingPage.css'; // For hover effects
+import { useCart } from '../context/CartContext'; // To get cart items
 
 const Navbar = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
+    const { cartItems } = useCart();
+
+    // Calculate total unique items in cart for the badge
+    const cartItemCount = cartItems.length;
 
     const handleLogout = () => {
         localStorage.removeItem('token');
@@ -16,7 +22,12 @@ const Navbar = () => {
     return (
         <header style={styles.header}>
             <div style={styles.container}>
-                <Link to="/" style={styles.logo}>Kanxa Safari 🐘</Link>
+                {/* Left Side: Logo */}
+                <Link to="/" style={styles.logo}>
+                    Kanxa Safari 🐘
+                </Link>
+                
+                {/* Middle: Navigation Links */}
                 <nav>
                     <ul style={styles.navList}>
                         <li><Link to="/transportation" className="lp-nav-link" style={styles.navLink}>Transportation</Link></li>
@@ -24,7 +35,16 @@ const Navbar = () => {
                         <li><Link to="/garage" className="lp-nav-link" style={styles.navLink}>Garage</Link></li>
                     </ul>
                 </nav>
-                <div>
+                
+                {/* Right Side: Cart and Auth Buttons */}
+                <div style={styles.rightSection}>
+                    <Link to="/cart" style={styles.cartLink}>
+                        🛒
+                        {cartItemCount > 0 && (
+                            <span style={styles.cartBadge}>{cartItemCount}</span>
+                        )}
+                    </Link>
+
                     {token ? (
                         <button onClick={handleLogout} className="lp-button lp-button-primary" style={{...styles.button, ...styles.buttonPrimary}}>
                             Logout
@@ -41,6 +61,7 @@ const Navbar = () => {
     );
 };
 
+// Full and complete styles object
 const styles = {
   header: {
     backgroundColor: '#fff',
@@ -77,17 +98,42 @@ const styles = {
     fontWeight: '500',
     fontSize: '1rem',
   },
+  rightSection: { // Wrapper for cart and buttons
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  },
+  cartLink: {
+    position: 'relative',
+    fontSize: '1.5rem',
+    textDecoration: 'none',
+    color: '#333',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  cartBadge: {
+    position: 'absolute',
+    top: -5,
+    right: -10,
+    backgroundColor: 'red',
+    color: 'white',
+    borderRadius: '50%',
+    padding: '2px 6px',
+    fontSize: '0.7rem',
+    fontWeight: 'bold',
+    border: '2px solid white',
+  },
   button: {
     textDecoration: 'none',
     padding: '0.5rem 1rem',
     borderRadius: '8px',
-    marginLeft: '1rem',
     fontWeight: '500',
     border: '1px solid #ddd',
     color: '#333',
     background: 'none',
     fontSize: '1rem',
     fontFamily: 'inherit',
+    whiteSpace: 'nowrap', // Prevents button text from wrapping
   },
   buttonPrimary: {
     backgroundColor: '#007bff',

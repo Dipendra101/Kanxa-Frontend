@@ -902,7 +902,7 @@ const styles = {
     }
 };
 
-// Add CSS animations and hover effects
+// Add CSS animations and hover effects with comprehensive responsive design
 const hoverStyles = `
 .service-card:hover {
     transform: translateY(-4px);
@@ -932,32 +932,207 @@ const hoverStyles = `
     color: #1e293b;
 }
 
+/* Responsive breakpoints */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 3rem !important;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    .dashboard-preview {
+        width: 350px !important;
+    }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
         text-align: center;
+        padding: 0 1rem !important;
     }
-    
+
+    .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .trust-indicators {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+    }
+
     .features-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
-    
+
+    .features-title {
+        font-size: 1.875rem !important;
+        text-align: center !important;
+    }
+
     .services-grid {
         grid-template-columns: 1fr !important;
     }
-    
+
     .stats-container {
         grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
     }
-    
-    .hero-title {
-        font-size: 2rem !important;
-    }
-    
+
     .section-title {
         font-size: 1.875rem !important;
+    }
+
+    .dashboard-preview {
+        width: 300px !important;
+        margin: 0 auto !important;
+    }
+
+    .visual-card {
+        width: 280px !important;
+    }
+
+    .testimonial-container {
+        padding: 0 1rem !important;
+    }
+
+    .cta-container {
+        padding: 0 1rem !important;
+    }
+
+    .cta-title {
+        font-size: 1.875rem !important;
+    }
+
+    .cta-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .section-title {
+        font-size: 1.625rem !important;
+    }
+
+    .features-title {
+        font-size: 1.625rem !important;
+    }
+
+    .cta-title {
+        font-size: 1.625rem !important;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .stat-card {
+        padding: 1.5rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.875rem !important;
+    }
+
+    .service-card {
+        padding: 1.5rem !important;
+    }
+
+    .dashboard-preview {
+        width: 280px !important;
+    }
+
+    .visual-card {
+        width: 260px !important;
+        padding: 1rem !important;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem !important;
+    }
+
+    .testimonial-text {
+        font-size: 1rem !important;
+    }
+
+    .hero-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .cta-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-title, .features-title, .cta-title {
+        font-size: 1.5rem !important;
+    }
+
+    .dashboard-preview {
+        width: 100% !important;
+        max-width: 260px !important;
+    }
+
+    .visual-card {
+        width: 100% !important;
+        max-width: 240px !important;
+    }
+
+    .service-card {
+        padding: 1rem !important;
+    }
+
+    .stat-card {
+        padding: 1rem !important;
+    }
+
+    .testimonial-card {
+        padding: 1rem !important;
     }
 }
 

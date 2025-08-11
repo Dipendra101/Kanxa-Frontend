@@ -9,10 +9,13 @@ import ResponsiveNavbar from './components/ResponsiveNavbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ModernHomePage from './pages/ModernHomePage';
+import ProfessionalHomePage from './pages/ProfessionalHomePage';
 import Signup from './pages/Signup';
 import ModernSignup from './pages/ModernSignup';
+import ProfessionalSignup from './pages/ProfessionalSignup';
 import Login from './pages/Login';
 import ModernLogin from './pages/ModernLogin';
+import ProfessionalLogin from './pages/ProfessionalLogin';
 import Dashboard from './pages/Dashboard'; // <-- IMPORT
 
 // User Dashboard Pages

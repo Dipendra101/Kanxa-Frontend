@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext'; // <-- IMPORT useAuth
 import ConfirmationModal from './ConfirmationModal';
 import ExitIcon from './ExitIcon';
+import NotificationCenter from './NotificationCenter';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -66,6 +67,8 @@ const Navbar = () => {
                                 <span style={styles.cartBadge}>{cartItemCount}</span>
                             )}
                         </Link>
+
+                        {user && <NotificationCenter />}
 
                         {user ? ( // <-- Check for user from context
                             <div style={{ position: 'relative' }} ref={dropdownRef}>

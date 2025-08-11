@@ -1,7 +1,8 @@
 // client/src/pages/Dashboard.jsx
 import React from 'react';
-import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import UserDashboard from './UserDashboard';
+import { Navigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const { user, isAdmin } = useAuth();
@@ -15,8 +16,8 @@ const Dashboard = () => {
         // If the user is an admin, redirect to the admin dashboard
         return <Navigate to="/admin/dashboard" replace />;
     } else {
-        // For regular users, redirect to their main account page
-        return <Navigate to="/my-bookings" replace />;
+        // For regular users, show the comprehensive dashboard
+        return <UserDashboard />;
     }
 };
 

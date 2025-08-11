@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Core Components & Pages
 import Navbar from './components/Navbar';
+import ResponsiveNavbar from './components/ResponsiveNavbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import Signup from './pages/Signup';
@@ -28,7 +29,13 @@ import GarageStorePage from './pages/GarageStorePage';
 // Admin Components & Pages
 import AdminProtectedRoute from './components/AdminProtectedRoute';
 import AdminLayout from './components/AdminLayout';
+import ResponsiveAdminLayout from './components/ResponsiveAdminLayout';
 import DashboardPage from './pages/admin/DashboardPage';
+import EnhancedDashboardPage from './pages/admin/EnhancedDashboardPage';
+import VehicleManagementPage from './pages/admin/VehicleManagementPage';
+import BookingManagementPage from './pages/admin/BookingManagementPage';
+import ProductManagementPage from './pages/admin/ProductManagementPage';
+import AnalyticsPage from './pages/admin/AnalyticsPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
 
@@ -36,7 +43,7 @@ function App() {
   return (
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Navbar />
+        <ResponsiveNavbar />
         <main style={{ flex: '1 0 auto' }}>
           <Routes>
             {/* --- CORE & PUBLIC ROUTES --- */}
@@ -63,14 +70,17 @@ function App() {
 
             {/* --- ADMIN ROUTES --- */}
             <Route element={<AdminProtectedRoute />}>
-                <Route path="/admin" element={<AdminLayout />}>
-                    <Route path="dashboard" element={<DashboardPage />} />
-                    <Route path="bookings" element={<Placeholder title="Admin Bookings Management" />} />
-                    <Route path="vehicles" element={<Placeholder title="Admin Vehicles Management" />} />
+                <Route path="/admin" element={<ResponsiveAdminLayout />}>
+                    <Route path="dashboard" element={<EnhancedDashboardPage />} />
+                    <Route path="bookings" element={<BookingManagementPage />} />
+                    <Route path="vehicles" element={<VehicleManagementPage />} />
                     <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
                     <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
-                    <Route path="products" element={<Placeholder title="Admin Products Management" />} />
+                    <Route path="products" element={<ProductManagementPage />} />
                     <Route path="requests" element={<Placeholder title="Admin Service Requests" />} />
+                    <Route path="users" element={<Placeholder title="Admin User Management" />} />
+                    <Route path="analytics" element={<AnalyticsPage />} />
+                    <Route path="activity" element={<Placeholder title="Admin Activity Log" />} />
                 </Route>
             </Route>
 

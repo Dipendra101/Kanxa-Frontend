@@ -812,7 +812,7 @@ const styles = {
     }
 };
 
-// Add hover effects and animations
+// Add hover effects and animations with comprehensive responsive design
 const hoverStyles = `
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -834,30 +834,430 @@ const hoverStyles = `
     background-color: #f8fafc !important;
 }
 
+/* Responsive breakpoints */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .content {
+        min-height: 100vh !important;
+    }
+
+    .left-side {
+        padding: 2.5rem !important;
+    }
+
+    .branding-content {
+        max-width: 450px !important;
+    }
+
+    .hero-title {
+        font-size: 2.25rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .benefit h3 {
+        font-size: 1rem !important;
+    }
+
+    .benefit p {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Tablets and mobile landscape */
 @media (max-width: 968px) {
     .content {
         flex-direction: column !important;
+        min-height: 100vh !important;
     }
-    
+
     .left-side {
-        min-height: 40vh !important;
+        min-height: 45vh !important;
         padding: 2rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
-    
+
+    .branding-content {
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .logo {
+        justify-content: center !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .benefits {
+        gap: 1rem !important;
+    }
+
+    .benefit {
+        text-align: center !important;
+    }
+
+    .testimonials {
+        margin-top: 1.5rem !important;
+    }
+
     .right-side {
         flex: 2 !important;
+        padding: 2rem 1.5rem !important;
+        min-height: 55vh !important;
     }
-    
+
+    .form-container {
+        max-width: 450px !important;
+        margin: 0 auto !important;
+    }
+
+    .form-title {
+        font-size: 1.625rem !important;
+    }
+
     .button-group {
         grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
     }
-    
+
     .back-button {
         order: 2;
     }
-    
-    .submit-button {
+
+    .submit-button, .next-button {
         order: 1;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .container {
+        min-height: 100vh !important;
+    }
+
+    .content {
+        flex-direction: column !important;
+        min-height: 100vh !important;
+    }
+
+    .left-side {
+        min-height: 40vh !important;
+        padding: 1.5rem !important;
+    }
+
+    .branding-content {
+        text-align: center !important;
+    }
+
+    .logo {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .logo-icon {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.25rem !important;
+    }
+
+    .logo-text {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .benefits {
+        gap: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .benefit {
+        padding: 1rem !important;
+        text-align: center !important;
+    }
+
+    .benefit-icon {
+        width: 35px !important;
+        height: 35px !important;
+        margin: 0 auto 0.5rem !important;
+    }
+
+    .benefit h3 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .benefit p {
+        font-size: 0.8rem !important;
+    }
+
+    .testimonials {
+        margin-top: 1rem !important;
+    }
+
+    .testimonial {
+        padding: 1rem !important;
+    }
+
+    .testimonial-content {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem !important;
+    }
+
+    .right-side {
+        padding: 1.5rem !important;
+        min-height: 60vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .form-container {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+
+    .form-title {
+        font-size: 1.5rem !important;
+    }
+
+    .form-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .step-indicator {
+        gap: 0.75rem !important;
+    }
+
+    .step {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .step-label {
+        font-size: 0.7rem !important;
+    }
+
+    .form {
+        gap: 1rem !important;
+    }
+
+    .input-group {
+        gap: 0.4rem !important;
+    }
+
+    .label {
+        font-size: 0.8rem !important;
+    }
+
+    .input {
+        padding: 0.6rem 0.875rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .password-strength {
+        gap: 0.25rem !important;
+    }
+
+    .strength-bar {
+        height: 3px !important;
+    }
+
+    .strength-text {
+        font-size: 0.7rem !important;
+    }
+
+    .checkbox-label {
+        font-size: 0.75rem !important;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+
+    .next-button, .submit-button, .back-button {
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .footer-text {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .left-side {
+        min-height: 35vh !important;
+        padding: 1rem !important;
+    }
+
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem !important;
+    }
+
+    .benefit {
+        padding: 0.75rem !important;
+    }
+
+    .benefit h3 {
+        font-size: 0.8rem !important;
+    }
+
+    .benefit p {
+        font-size: 0.75rem !important;
+    }
+
+    .testimonial {
+        padding: 0.75rem !important;
+    }
+
+    .testimonial-content {
+        font-size: 0.8rem !important;
+    }
+
+    .right-side {
+        padding: 1rem !important;
+        min-height: 65vh !important;
+    }
+
+    .form-container {
+        max-width: 100% !important;
+    }
+
+    .form-title {
+        font-size: 1.375rem !important;
+    }
+
+    .step-indicator {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .step {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .step-label {
+        font-size: 0.65rem !important;
+    }
+
+    .form {
+        gap: 0.875rem !important;
+    }
+
+    .label {
+        font-size: 0.75rem !important;
+    }
+
+    .input {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .password-wrapper svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .strength-text {
+        font-size: 0.65rem !important;
+    }
+
+    .checkbox {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .checkbox-label {
+        font-size: 0.7rem !important;
+    }
+
+    .next-button, .submit-button, .back-button {
+        padding: 0.65rem 1rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .footer-text {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .left-side {
+        min-height: 30vh !important;
+        padding: 0.75rem !important;
+    }
+
+    .logo-icon {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1rem !important;
+    }
+
+    .logo-text {
+        font-size: 1.1rem !important;
+    }
+
+    .hero-title {
+        font-size: 1.375rem !important;
+    }
+
+    .benefits {
+        display: none !important;
+    }
+
+    .testimonials {
+        display: none !important;
+    }
+
+    .right-side {
+        padding: 0.75rem !important;
+        min-height: 70vh !important;
+    }
+
+    .form-header {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .step-indicator {
+        margin-bottom: 1rem !important;
+    }
+
+    .form {
+        gap: 0.75rem !important;
     }
 }
 `;

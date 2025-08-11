@@ -698,9 +698,290 @@ const styles = {
     }
 };
 
-// Media query styles for larger screens
-if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-    styles.logoText.display = 'block';
+// Enhanced responsive styles
+const responsiveStyles = `
+/* Desktop styles */
+@media (min-width: 769px) {
+    .logo-text {
+        display: block !important;
+    }
+
+    .cart-link {
+        padding: 0.75rem !important;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1.25rem !important;
+    }
+
+    .user-button {
+        padding: 0.75rem !important;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) and (min-width: 481px) {
+    .header {
+        padding: 0.75rem 0 !important;
+    }
+
+    .container {
+        padding: 0 1.5rem !important;
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+    }
+
+    .logo-emoji {
+        font-size: 1.4rem !important;
+    }
+
+    .mobile-menu {
+        top: 65px !important;
+        left: 1rem !important;
+        right: 1rem !important;
+    }
+
+    .mobile-nav-link {
+        padding: 1.25rem 1.5rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    .mobile-nav-icon {
+        font-size: 1.3rem !important;
+    }
+
+    .mobile-user-avatar {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.5rem 0 !important;
+    }
+
+    .container {
+        padding: 0 1rem !important;
+    }
+
+    .logo {
+        font-size: 1.1rem !important;
+    }
+
+    .logo-emoji {
+        font-size: 1.3rem !important;
+    }
+
+    .cart-link {
+        font-size: 1.2rem !important;
+        padding: 0.4rem !important;
+    }
+
+    .cart-badge {
+        top: -3px !important;
+        right: -6px !important;
+        padding: 1px 4px !important;
+        font-size: 0.65rem !important;
+        min-width: 16px !important;
+        height: 16px !important;
+    }
+
+    .user-button {
+        padding: 0.4rem !important;
+    }
+
+    .user-avatar {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .hamburger {
+        padding: 0.4rem !important;
+    }
+
+    .hamburger-line {
+        width: 20px !important;
+        height: 2px !important;
+        margin: 2px 0 !important;
+    }
+
+    .mobile-menu {
+        top: 55px !important;
+        left: 0.5rem !important;
+        right: 0.5rem !important;
+    }
+
+    .mobile-menu-title {
+        font-size: 1rem !important;
+    }
+
+    .mobile-nav-link {
+        padding: 1rem 1.25rem !important;
+        font-size: 1rem !important;
+    }
+
+    .mobile-nav-icon {
+        font-size: 1.1rem !important;
+        min-width: 20px !important;
+    }
+
+    .mobile-user-info {
+        padding: 0.75rem 1.25rem !important;
+        margin: 0 0.75rem 0.75rem !important;
+    }
+
+    .mobile-user-avatar {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1rem !important;
+    }
+
+    .mobile-user-name {
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-user-role {
+        font-size: 0.75rem !important;
+    }
+
+    .mobile-auth-button {
+        margin: 0.4rem 1.25rem !important;
+        padding: 0.6rem 0.875rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .mobile-logout-button {
+        padding: 0.6rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.75rem !important;
+    }
+
+    .logo {
+        font-size: 1rem !important;
+    }
+
+    .logo-emoji {
+        font-size: 1.2rem !important;
+    }
+
+    .mobile-menu {
+        top: 50px !important;
+        left: 0.25rem !important;
+        right: 0.25rem !important;
+    }
+
+    .mobile-menu-header {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .mobile-nav-link {
+        padding: 0.875rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-nav-icon {
+        font-size: 1rem !important;
+        min-width: 18px !important;
+    }
+
+    .mobile-user-info {
+        padding: 0.6rem 1rem !important;
+        margin: 0 0.5rem 0.6rem !important;
+    }
+
+    .mobile-user-avatar {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-auth-button {
+        margin: 0.3rem 1rem !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .mobile-logout-button {
+        padding: 0.5rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Dropdown menu responsive adjustments */
+@media (max-width: 480px) {
+    .dropdown-menu {
+        position: fixed !important;
+        top: 50px !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        width: auto !important;
+        min-width: auto !important;
+        max-width: none !important;
+        border-radius: 8px !important;
+    }
+
+    .dropdown-item {
+        padding: 0.875rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .menu-icon {
+        font-size: 0.9rem !important;
+        min-width: 16px !important;
+    }
+}
+
+/* Touch targets for better accessibility */
+@media (max-width: 768px) {
+    .cart-link, .user-button, .hamburger {
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    .mobile-nav-link, .mobile-auth-button {
+        min-height: 44px !important;
+    }
+
+    .dropdown-item {
+        min-height: 44px !important;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hamburger-line {
+        height: 2px !important;
+    }
+
+    .cart-badge {
+        border-width: 1px !important;
+    }
+}
+`;
+
+// Inject enhanced responsive styles
+if (typeof document !== 'undefined') {
+    const existingStyleSheet = document.querySelector('#responsive-navbar-styles');
+    if (existingStyleSheet) {
+        existingStyleSheet.remove();
+    }
+
+    const styleSheet = document.createElement('style');
+    styleSheet.id = 'responsive-navbar-styles';
+    styleSheet.textContent = responsiveStyles;
+    document.head.appendChild(styleSheet);
 }
 
 export default ResponsiveNavbar;

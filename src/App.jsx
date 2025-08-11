@@ -8,8 +8,11 @@ import Navbar from './components/Navbar';
 import ResponsiveNavbar from './components/ResponsiveNavbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import ModernHomePage from './pages/ModernHomePage';
 import Signup from './pages/Signup';
+import ModernSignup from './pages/ModernSignup';
 import Login from './pages/Login';
+import ModernLogin from './pages/ModernLogin';
 import Dashboard from './pages/Dashboard'; // <-- IMPORT
 
 // User Dashboard Pages

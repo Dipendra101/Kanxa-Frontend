@@ -32,6 +32,8 @@ import DashboardPage from './pages/admin/DashboardPage';
 import EnhancedDashboardPage from './pages/admin/EnhancedDashboardPage';
 import VehicleManagementPage from './pages/admin/VehicleManagementPage';
 import BookingManagementPage from './pages/admin/BookingManagementPage';
+import ProductManagementPage from './pages/admin/ProductManagementPage';
+import AnalyticsPage from './pages/admin/AnalyticsPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
 

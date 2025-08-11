@@ -102,7 +102,11 @@ const ResponsiveNavbar = () => {
                 <div style={styles.container}>
                     {/* Logo */}
                     <Link to="/" style={styles.logo} onClick={handleLinkClick}>
-                        <span style={styles.logoEmoji}>🐘</span>
+                        <div style={styles.logoIcon}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7V10C2 16 6 20.9 12 22C18 20.9 22 16 22 10V7L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
                         <span style={styles.logoText}>Kanxa Safari</span>
                     </Link>
                     

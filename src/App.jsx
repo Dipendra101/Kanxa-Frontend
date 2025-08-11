@@ -39,6 +39,7 @@ import VehicleManagementPage from './pages/admin/VehicleManagementPage';
 import BookingManagementPage from './pages/admin/BookingManagementPage';
 import ProductManagementPage from './pages/admin/ProductManagementPage';
 import ServiceRequestManagementPage from './pages/admin/ServiceRequestManagementPage';
+import OrderManagementPage from './pages/admin/OrderManagementPage';
 import AnalyticsPage from './pages/admin/AnalyticsPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;

@@ -456,4 +456,411 @@ const styles = {
     }
 };
 
+// Enhanced responsive styles
+const responsiveStyles = `
+/* Desktop styles */
+@media (min-width: 769px) {
+    .admin-layout {
+        height: 100vh !important;
+    }
+
+    .sidebar {
+        position: fixed !important;
+        height: 100vh !important;
+        overflow-y: auto !important;
+    }
+
+    .main-content {
+        margin-left: 280px !important;
+        padding: 2rem !important;
+    }
+
+    .nav-link {
+        margin: 0.5rem 0 0.5rem 1.5rem !important;
+        padding: 1rem 1.5rem !important;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-text {
+        font-size: 1rem !important;
+    }
+}
+
+/* Large tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .sidebar {
+        width: 260px !important;
+    }
+
+    .main-content {
+        margin-left: 260px !important;
+        padding: 1.5rem !important;
+    }
+
+    .sidebar-title {
+        font-size: 1.2rem !important;
+    }
+
+    .admin-info {
+        padding: 0.6rem !important;
+    }
+
+    .admin-name {
+        font-size: 0.85rem !important;
+    }
+
+    .admin-role {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column !important;
+    }
+
+    .mobile-header {
+        height: 65px !important;
+        padding: 0 1rem !important;
+    }
+
+    .hamburger-line {
+        width: 22px !important;
+        height: 2.5px !important;
+    }
+
+    .header-title {
+        font-size: 1.1rem !important;
+    }
+
+    .header-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .sidebar {
+        width: 300px !important;
+        top: 0 !important;
+    }
+
+    .mobile-header-content {
+        padding: 1rem !important;
+    }
+
+    .brand-text {
+        font-size: 1rem !important;
+    }
+
+    .nav-section {
+        margin-bottom: 1.25rem !important;
+    }
+
+    .nav-header {
+        padding: 0.4rem 1.25rem !important;
+        font-size: 0.7rem !important;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0 0.25rem 1rem !important;
+        padding: 0.875rem 1.25rem !important;
+    }
+
+    .nav-icon {
+        font-size: 1.1rem !important;
+        min-width: 18px !important;
+    }
+
+    .nav-text {
+        font-size: 0.9rem !important;
+    }
+
+    .sidebar-footer {
+        padding: 0.875rem 1.25rem !important;
+    }
+
+    .footer-stats {
+        gap: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .stat-value {
+        font-size: 0.9rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.65rem !important;
+    }
+
+    .status-text {
+        font-size: 0.7rem !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding-top: 85px !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .mobile-header {
+        height: 60px !important;
+        padding: 0 0.75rem !important;
+    }
+
+    .hamburger {
+        padding: 0.375rem !important;
+        margin-right: 0.75rem !important;
+    }
+
+    .hamburger-line {
+        width: 20px !important;
+        height: 2px !important;
+        margin: 2.5px 0 !important;
+    }
+
+    .header-title {
+        font-size: 1rem !important;
+        margin-bottom: 0.125rem !important;
+    }
+
+    .header-subtitle {
+        font-size: 0.75rem !important;
+    }
+
+    .sidebar {
+        width: 280px !important;
+    }
+
+    .mobile-header-content {
+        padding: 0.875rem !important;
+    }
+
+    .brand-emoji {
+        font-size: 1.3rem !important;
+    }
+
+    .brand-text {
+        font-size: 0.95rem !important;
+    }
+
+    .close-button {
+        font-size: 1.1rem !important;
+        padding: 0.375rem !important;
+    }
+
+    .nav-section {
+        margin-bottom: 1rem !important;
+    }
+
+    .nav-header {
+        padding: 0.375rem 1rem !important;
+        font-size: 0.65rem !important;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0 0.25rem 0.75rem !important;
+        padding: 0.75rem 1rem !important;
+        border-radius: 0 20px 20px 0 !important;
+    }
+
+    .nav-icon {
+        font-size: 1rem !important;
+        min-width: 16px !important;
+    }
+
+    .nav-text {
+        font-size: 0.85rem !important;
+    }
+
+    .sidebar-footer {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .footer-stats {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+
+    .stat-value {
+        font-size: 0.85rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.6rem !important;
+    }
+
+    .system-status {
+        padding: 0.375rem !important;
+    }
+
+    .status-indicator {
+        width: 6px !important;
+        height: 6px !important;
+    }
+
+    .status-text {
+        font-size: 0.65rem !important;
+    }
+
+    .main-content {
+        padding-top: 80px !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+    .mobile-header {
+        height: 55px !important;
+        padding: 0 0.5rem !important;
+    }
+
+    .hamburger {
+        margin-right: 0.5rem !important;
+    }
+
+    .header-title {
+        font-size: 0.9rem !important;
+    }
+
+    .header-subtitle {
+        font-size: 0.7rem !important;
+    }
+
+    .sidebar {
+        width: 260px !important;
+    }
+
+    .mobile-header-content {
+        padding: 0.75rem !important;
+    }
+
+    .brand-text {
+        font-size: 0.9rem !important;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0 0.25rem 0.5rem !important;
+        padding: 0.6rem 0.875rem !important;
+    }
+
+    .nav-icon {
+        font-size: 0.9rem !important;
+        min-width: 14px !important;
+    }
+
+    .nav-text {
+        font-size: 0.8rem !important;
+    }
+
+    .sidebar-footer {
+        padding: 0.6rem 0.875rem !important;
+    }
+
+    .footer-stats {
+        gap: 0.375rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .stat-value {
+        font-size: 0.8rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.55rem !important;
+    }
+
+    .status-text {
+        font-size: 0.6rem !important;
+    }
+
+    .main-content {
+        padding-top: 75px !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+}
+
+/* Touch targets for better accessibility */
+@media (max-width: 768px) {
+    .hamburger, .close-button {
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    .nav-link {
+        min-height: 44px !important;
+    }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        transition: transform 0.25s ease !important;
+    }
+
+    .overlay {
+        transition: opacity 0.25s ease !important;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .mobile-header {
+        height: 50px !important;
+    }
+
+    .main-content {
+        padding-top: 70px !important;
+    }
+
+    .nav-section {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .nav-link {
+        padding: 0.6rem 1rem !important;
+    }
+
+    .sidebar-footer {
+        padding: 0.6rem 1rem !important;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hamburger-line {
+        height: 2px !important;
+    }
+
+    .status-indicator {
+        border: 1px solid rgba(255,255,255,0.1) !important;
+    }
+}
+`;
+
+// Inject enhanced responsive styles
+if (typeof document !== 'undefined') {
+    const existingStyleSheet = document.querySelector('#responsive-admin-layout-styles');
+    if (existingStyleSheet) {
+        existingStyleSheet.remove();
+    }
+
+    const styleSheet = document.createElement('style');
+    styleSheet.id = 'responsive-admin-layout-styles';
+    styleSheet.textContent = responsiveStyles;
+    document.head.appendChild(styleSheet);
+}
+
 export default ResponsiveAdminLayout;

@@ -67,13 +67,16 @@ function App() {
             {/* --- ADMIN ROUTES --- */}
             <Route element={<AdminProtectedRoute />}>
                 <Route path="/admin" element={<AdminLayout />}>
-                    <Route path="dashboard" element={<DashboardPage />} />
-                    <Route path="bookings" element={<Placeholder title="Admin Bookings Management" />} />
-                    <Route path="vehicles" element={<Placeholder title="Admin Vehicles Management" />} />
+                    <Route path="dashboard" element={<EnhancedDashboardPage />} />
+                    <Route path="bookings" element={<BookingManagementPage />} />
+                    <Route path="vehicles" element={<VehicleManagementPage />} />
                     <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
                     <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
                     <Route path="products" element={<Placeholder title="Admin Products Management" />} />
                     <Route path="requests" element={<Placeholder title="Admin Service Requests" />} />
+                    <Route path="users" element={<Placeholder title="Admin User Management" />} />
+                    <Route path="analytics" element={<Placeholder title="Admin Analytics" />} />
+                    <Route path="activity" element={<Placeholder title="Admin Activity Log" />} />
                 </Route>
             </Route>
 

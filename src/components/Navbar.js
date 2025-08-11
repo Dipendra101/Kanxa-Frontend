@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext'; // <-- IMPORT useAuth
 import ConfirmationModal from './ConfirmationModal';
 import ExitIcon from './ExitIcon';
+import NotificationCenter from './NotificationCenter';
 
 const Navbar = () => {
     const navigate = useNavigate();

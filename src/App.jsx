@@ -43,7 +43,7 @@ function App() {
   return (
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Navbar />
+        <ResponsiveNavbar />
         <main style={{ flex: '1 0 auto' }}>
           <Routes>
             {/* --- CORE & PUBLIC ROUTES --- */}

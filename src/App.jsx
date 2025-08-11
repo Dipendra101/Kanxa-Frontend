@@ -28,6 +28,7 @@ import GarageStorePage from './pages/GarageStorePage';
 // Admin Components & Pages
 import AdminProtectedRoute from './components/AdminProtectedRoute';
 import AdminLayout from './components/AdminLayout';
+import ResponsiveAdminLayout from './components/ResponsiveAdminLayout';
 import DashboardPage from './pages/admin/DashboardPage';
 import EnhancedDashboardPage from './pages/admin/EnhancedDashboardPage';
 import VehicleManagementPage from './pages/admin/VehicleManagementPage';

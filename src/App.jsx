@@ -50,9 +50,9 @@ function App() {
         <main style={{ flex: '1 0 auto' }}>
           <Routes>
             {/* --- CORE & PUBLIC ROUTES --- */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/" element={<ModernHomePage />} />
+            <Route path="/login" element={<ModernLogin />} />
+            <Route path="/signup" element={<ModernSignup />} />
 
             {/* --- GENERAL DASHBOARD REDIRECT --- */}
             <Route path="/dashboard" element={<Dashboard />} />

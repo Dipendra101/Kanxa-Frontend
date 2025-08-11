@@ -69,7 +69,7 @@ function App() {
 
             {/* --- ADMIN ROUTES --- */}
             <Route element={<AdminProtectedRoute />}>
-                <Route path="/admin" element={<AdminLayout />}>
+                <Route path="/admin" element={<ResponsiveAdminLayout />}>
                     <Route path="dashboard" element={<EnhancedDashboardPage />} />
                     <Route path="bookings" element={<BookingManagementPage />} />
                     <Route path="vehicles" element={<VehicleManagementPage />} />

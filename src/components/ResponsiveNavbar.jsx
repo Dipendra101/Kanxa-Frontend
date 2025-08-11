@@ -76,16 +76,63 @@ const ResponsiveNavbar = () => {
     };
 
     const navLinks = [
-        { to: '/transportation', label: 'Transportation', icon: '🚌' },
-        { to: '/construction', label: 'Construction', icon: '🏗️' },
-        { to: '/garage', label: 'Garage', icon: '🔧' }
+        {
+            to: '/transportation',
+            label: 'Transportation',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12V20H6V18H18V20H20V12L18 8H6L4 12Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="8" cy="16" r="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="16" cy="16" r="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        },
+        {
+            to: '/construction',
+            label: 'Construction',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7V10C2 16 6 20.9 12 22C18 20.9 22 16 22 10V7L12 2Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        },
+        {
+            to: '/garage',
+            label: 'Garage',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 1 5.1 3S1 8.9 3 10.9C4.9 12.8 7.6 13.3 9.9 12.4L19 21.7C19.4 22.1 20 22.1 20.4 21.7L22.7 19.4C23.1 19 23.1 18.4 22.7 19Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        }
     ];
 
     const userMenuItems = [
-        { to: '/dashboard', label: 'Dashboard', icon: '📊' },
-        { to: '/my-bookings', label: 'My Bookings', icon: '🎫' },
-        { to: '/my-orders', label: 'My Orders', icon: '📦' },
-        { to: '/my-requests', label: 'My Service Requests', icon: '🔧' }
+        {
+            to: '/dashboard',
+            label: 'Dashboard',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <rect x="3" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <rect x="14" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        },
+        {
+            to: '/my-bookings',
+            label: 'My Bookings',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 2V6M9 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        },
+        {
+            to: '/my-orders',
+            label: 'My Orders',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        },
+        {
+            to: '/my-requests',
+            label: 'My Service Requests',
+            icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.7 19L13.6 9.9C14.5 7.6 14 4.9 12.1 3C10.1 1 7.1 1 5.1 3S1 8.9 3 10.9C4.9 12.8 7.6 13.3 9.9 12.4L19 21.7C19.4 22.1 20 22.1 20.4 21.7L22.7 19.4C23.1 19 23.1 18.4 22.7 19Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+        }
     ];
 
     return (

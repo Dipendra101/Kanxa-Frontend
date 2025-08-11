@@ -81,7 +81,7 @@ function App() {
                     <Route path="bookings" element={<BookingManagementPage />} />
                     <Route path="vehicles" element={<VehicleManagementPage />} />
                     <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
-                    <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
+                    <Route path="orders" element={<OrderManagementPage />} />
                     <Route path="products" element={<ProductManagementPage />} />
                     <Route path="requests" element={<ServiceRequestManagementPage />} />
                     <Route path="users" element={<Placeholder title="Admin User Management" />} />

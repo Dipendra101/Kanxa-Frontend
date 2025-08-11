@@ -68,6 +68,8 @@ const Navbar = () => {
                             )}
                         </Link>
 
+                        {user && <NotificationCenter />}
+
                         {user ? ( // <-- Check for user from context
                             <div style={{ position: 'relative' }} ref={dropdownRef}>
                                 <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="user-menu-button">

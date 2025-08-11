@@ -82,7 +82,7 @@ function App() {
                     <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
                     <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
                     <Route path="products" element={<ProductManagementPage />} />
-                    <Route path="requests" element={<Placeholder title="Admin Service Requests" />} />
+                    <Route path="requests" element={<ServiceRequestManagementPage />} />
                     <Route path="users" element={<Placeholder title="Admin User Management" />} />
                     <Route path="analytics" element={<AnalyticsPage />} />
                     <Route path="activity" element={<Placeholder title="Admin Activity Log" />} />

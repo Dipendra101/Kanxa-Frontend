@@ -451,8 +451,13 @@ const styles = {
         textDecoration: 'none',
         transition: 'all 0.3s ease'
     },
-    logoEmoji: {
-        fontSize: '1.5rem'
+    logoIcon: {
+        width: '24px',
+        height: '24px',
+        color: '#3b82f6',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     logoText: {
         display: 'none'

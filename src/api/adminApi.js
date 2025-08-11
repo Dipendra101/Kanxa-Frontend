@@ -25,6 +25,16 @@ export const getAllAdminBookings = () => axios.get(`${API_URL}/transport/booking
 export const getAllAdminProducts = () => axios.get(`${API_URL}/products`, getAuthHeaders());
 export const createProduct = (productData) => axios.post(`${API_URL}/products`, productData, getAuthHeaders());
 
+// --- NEWLY ADDED ---
+export const updateProduct = (id, productData) => {
+    return axios.put(`${API_URL}/products/${id}`, productData, getAuthHeaders());
+};
+
+export const deleteProduct = (id) => {
+    return axios.delete(`${API_URL}/products/${id}`, getAuthHeaders());
+};
+// --- END OF NEWLY ADDED ---
+
 // --- Order Management ---
 export const getAllOrders = () => axios.get(`${API_URL}/orders`, getAuthHeaders());
 export const updateOrderStatus = (id, status) => axios.put(`${API_URL}/orders/${id}/status`, { status }, getAuthHeaders());

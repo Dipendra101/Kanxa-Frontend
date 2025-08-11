@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard'; // <-- IMPORT
+import Dashboard from './pages/Dashboard';
 
 // User Dashboard Pages
 import MyBookingsPage from './pages/MyBookingsPage';
@@ -29,6 +29,12 @@ import GarageStorePage from './pages/GarageStorePage';
 import AdminProtectedRoute from './components/AdminProtectedRoute';
 import AdminLayout from './components/AdminLayout';
 import DashboardPage from './pages/admin/DashboardPage';
+import AdminBookingsPage from './pages/admin/AdminBookingsPage';
+import AdminProductsPage from './pages/admin/AdminProductsPage';
+import AdminOrdersPage from './pages/admin/AdminOrdersPage';
+import AdminVehiclesPage from './pages/admin/AdminVehiclesPage';
+import AdminDriversPage from './pages/admin/AdminDriversPage';
+import AdminRequestsPage from './pages/admin/AdminRequestsPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
 
@@ -65,12 +71,12 @@ function App() {
             <Route element={<AdminProtectedRoute />}>
                 <Route path="/admin" element={<AdminLayout />}>
                     <Route path="dashboard" element={<DashboardPage />} />
-                    <Route path="bookings" element={<Placeholder title="Admin Bookings Management" />} />
-                    <Route path="vehicles" element={<Placeholder title="Admin Vehicles Management" />} />
-                    <Route path="drivers" element={<Placeholder title="Admin Drivers Management" />} />
-                    <Route path="orders" element={<Placeholder title="Admin Orders Management" />} />
-                    <Route path="products" element={<Placeholder title="Admin Products Management" />} />
-                    <Route path="requests" element={<Placeholder title="Admin Service Requests" />} />
+                    <Route path="bookings" element={<AdminBookingsPage />} />
+                    <Route path="products" element={<AdminProductsPage />} />
+                    <Route path="orders" element={<AdminOrdersPage />} />
+                    <Route path="vehicles" element={<AdminVehiclesPage />} />
+                    <Route path="drivers" element={<AdminDriversPage />} />
+                    <Route path="requests" element={<AdminRequestsPage />} />
                 </Route>
             </Route>
 

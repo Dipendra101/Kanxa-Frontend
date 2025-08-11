@@ -29,6 +29,9 @@ import GarageStorePage from './pages/GarageStorePage';
 import AdminProtectedRoute from './components/AdminProtectedRoute';
 import AdminLayout from './components/AdminLayout';
 import DashboardPage from './pages/admin/DashboardPage';
+import EnhancedDashboardPage from './pages/admin/EnhancedDashboardPage';
+import VehicleManagementPage from './pages/admin/VehicleManagementPage';
+import BookingManagementPage from './pages/admin/BookingManagementPage';
 
 const Placeholder = ({ title }) => <h1 style={{ textAlign: 'center', padding: '5rem' }}>{title} Page</h1>;
 
